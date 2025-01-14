@@ -6,11 +6,11 @@ const GlobalStyle = () => (
 	<Global
 		styles={css`
 			${reset}
+
 			* {
-				font-family: sans-serif !important;
+				font-family: 'Noto Sans KR', sans-serif !important;
 				box-sizing: border-box;
 			}
-
 			.container {
 				max-width: 1200px;
 				margin: 0 auto;
