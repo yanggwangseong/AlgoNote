@@ -10,6 +10,12 @@ const GlobalStyle = () => (
 				font-family: sans-serif !important;
 				box-sizing: border-box;
 			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 1rem;
+			}
 		`}
 	/>
 );
