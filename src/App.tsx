@@ -19,21 +19,21 @@ const AppContainer = styled.div`
 
 const categories: Category[] = [
 	{
-		name: 'Array / String',
+		name: 'DFS / BFS',
 		problems: [
 			{
-				id: 88,
-				title: 'Merge Sorted Array',
+				id: 1,
+				title: 'DFS와 BFS',
 				difficulty: 'Easy',
 				completed: false,
-				link: 'https://leetcode.com/problems/merge-sorted-array',
+				link: 'https://www.acmicpc.net/problem/1260',
 			},
 			{
-				id: 27,
-				title: 'Remove Element',
+				id: 2,
+				title: '바이러스',
 				difficulty: 'Easy',
 				completed: false,
-				link: 'https://leetcode.com/problems/remove-element',
+				link: 'https://www.acmicpc.net/problem/2606',
 			},
 		],
 	},

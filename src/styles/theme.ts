@@ -6,6 +6,7 @@ export const lightTheme: Theme = {
 	text: '#333333',
 	border: '#e5e7eb',
 	problemBackground: '#ffffff',
+	categoryBackground: '#f7f7f7',
 };
 
 export const darkTheme: Theme = {
@@ -14,4 +15,5 @@ export const darkTheme: Theme = {
 	text: '#ffffff',
 	border: '#2d2d2d',
 	problemBackground: '#2d2d2d',
+	categoryBackground: '#242424',
 };
