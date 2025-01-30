@@ -1,4 +1,5 @@
 export type Difficulty = 'Easy' | 'Medium' | 'Hard';
+export type Platform = 'Baekjoon' | 'Programmers' | 'LeetCode';
 
 export interface Problem {
 	id: number;
@@ -6,6 +7,7 @@ export interface Problem {
 	difficulty: Difficulty;
 	completed: boolean;
 	link?: string;
+	platform: Platform;
 }
 
 export interface Category {

@@ -27,6 +27,7 @@ const categories: Category[] = [
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/1260',
+				platform: 'Baekjoon',
 			},
 			{
 				id: 2,
@@ -34,6 +35,7 @@ const categories: Category[] = [
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/2606',
+				platform: 'Baekjoon',
 			},
 		],
 	},
@@ -46,6 +48,7 @@ const categories: Category[] = [
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://leetcode.com/problems/valid-palindrome',
+				platform: 'LeetCode',
 			},
 			{
 				id: 167,
@@ -53,6 +56,7 @@ const categories: Category[] = [
 				difficulty: 'Medium',
 				completed: false,
 				link: 'https://leetcode.com/problems/two-sum-ii-input-array-is-sorted',
+				platform: 'LeetCode',
 			},
 		],
 	},
@@ -65,6 +69,7 @@ const categories: Category[] = [
 				difficulty: 'Medium',
 				completed: false,
 				link: 'https://leetcode.com/problems/minimum-size-subarray-sum',
+				platform: 'LeetCode',
 			},
 			{
 				id: 3,
@@ -72,6 +77,7 @@ const categories: Category[] = [
 				difficulty: 'Medium',
 				completed: false,
 				link: 'https://leetcode.com/problems/longest-substring-without-repeating-characters',
+				platform: 'LeetCode',
 			},
 		],
 	},

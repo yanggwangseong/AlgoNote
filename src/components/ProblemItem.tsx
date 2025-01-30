@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { Problem } from '@/types/problem';
+import { Difficulty, Platform, Problem } from '@/types/problem';
 
 const Item = styled.div`
 	display: flex;
@@ -27,7 +27,13 @@ const Title = styled.a`
 	}
 `;
 
-const Badge = styled.span<{ difficulty: string }>`
+const BadgeContainer = styled.div`
+	display: flex;
+	gap: 8px;
+	align-items: center;
+`;
+
+const DifficultyBadge = styled.span<{ difficulty: Difficulty }>`
 	padding: 4px 8px;
 	border-radius: 4px;
 	font-size: 12px;
@@ -46,6 +52,26 @@ const Badge = styled.span<{ difficulty: string }>`
 	}};
 `;
 
+const PlatformBadge = styled.span<{ platform: Platform }>`
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 500;
+	background-color: ${({ platform }) => {
+		switch (platform) {
+			case 'Baekjoon':
+				return '#0076C0';
+			case 'Programmers':
+				return '#44CEB0';
+			case 'LeetCode':
+				return '#FFA116';
+			default:
+				return '#333';
+		}
+	}};
+	color: white;
+`;
+
 interface ProblemItemProps {
 	problem: Problem;
 	onToggleComplete: (id: number) => void;
@@ -62,7 +88,14 @@ export function ProblemItem({ problem, onToggleComplete }: ProblemItemProps) {
 			<Title href={problem.link} target="_blank" rel="noopener noreferrer">
 				{problem.id}. {problem.title}
 			</Title>
-			<Badge difficulty={problem.difficulty}>{problem.difficulty}</Badge>
+			<BadgeContainer>
+				<PlatformBadge platform={problem.platform}>
+					{problem.platform}
+				</PlatformBadge>
+				<DifficultyBadge difficulty={problem.difficulty}>
+					{problem.difficulty}
+				</DifficultyBadge>
+			</BadgeContainer>
 		</Item>
 	);
 }
