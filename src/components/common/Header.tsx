@@ -35,18 +35,48 @@ const ThemeToggle = styled.button`
 	color: ${(props) => props.theme.text};
 `;
 
+const Select = styled.select`
+	padding: 8px 16px;
+	border-radius: 4px;
+	border: 1px solid ${(props) => props.theme.border};
+	background: transparent;
+	color: ${(props) => props.theme.text};
+	cursor: pointer;
+	margin-right: 8px;
+
+	&:focus {
+		outline: none;
+		border-color: ${(props) => props.theme.primary};
+	}
+`;
+
 interface HeaderProps {
 	onToggleTheme: () => void;
+	selectedProblemSet: number;
+	onProblemSetChange: (value: number) => void;
 }
 
-export function Header({ onToggleTheme }: HeaderProps) {
+export function Header({
+	onToggleTheme,
+	selectedProblemSet,
+	onProblemSetChange,
+}: HeaderProps) {
 	return (
 		<HeaderContainer>
 			<TitleContainer>
-				<Title>Top Interview 150</Title>
-				<Subtitle>Complete the study plan to win the badge!</Subtitle>
+				<Title>알고리즘 문제 풀이</Title>
+				<Subtitle>Algorithm Problem Solving</Subtitle>
 			</TitleContainer>
-			<ThemeToggle onClick={onToggleTheme}>Toggle Theme</ThemeToggle>
+			<div>
+				<Select
+					value={selectedProblemSet}
+					onChange={(e) => onProblemSetChange(Number(e.target.value))}
+				>
+					<option value={1}>Problem Set 1</option>
+					<option value={2}>Problem Set 2</option>
+				</Select>
+				<ThemeToggle onClick={onToggleTheme}>Theme Toggle</ThemeToggle>
+			</div>
 		</HeaderContainer>
 	);
 }

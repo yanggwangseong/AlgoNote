@@ -1,6 +1,6 @@
 import { Category } from '@/types/problem';
 
-export const categories1: Category[] = [
+export const categories2: Category[] = [
 	{
 		name: 'DFS / BFS',
 		problems: [
@@ -83,6 +83,14 @@ export const categories1: Category[] = [
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/1149',
+				platform: 'Baekjoon',
+			},
+			{
+				id: 2,
+				title: '(#18) 백준 11053 가장 긴 증가하는 부분 수열 - LIS',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/11053',
 				platform: 'Baekjoon',
 			},
 		],
