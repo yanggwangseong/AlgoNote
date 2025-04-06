@@ -2,7 +2,7 @@ import { Category } from '@/types/problem';
 
 export const categories2: Category[] = [
 	{
-		name: 'DFS / BFS',
+		name: 'DFS / BFS 😀',
 		problems: [
 			{
 				id: 1,
@@ -23,7 +23,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: '다익스트라',
+		name: '다익스트라 😀',
 		problems: [
 			{
 				id: 1,
@@ -36,7 +36,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: '구현',
+		name: '구현 😀',
 		problems: [
 			{
 				id: 1,
@@ -49,7 +49,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: '브루트포스',
+		name: '브루트포스 😀',
 		problems: [
 			{
 				id: 1,
@@ -62,7 +62,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: '그리디',
+		name: '그리디 😀',
 		problems: [
 			{
 				id: 1,
@@ -75,7 +75,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: 'DP',
+		name: 'DP 😀',
 		problems: [
 			{
 				id: 1,
@@ -135,7 +135,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: '스택/큐',
+		name: '스택/큐 🤖',
 		problems: [
 			{
 				id: 1,
@@ -148,7 +148,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: '해시',
+		name: '해시 🤖',
 		problems: [
 			{
 				id: 1,
@@ -161,7 +161,7 @@ export const categories2: Category[] = [
 		],
 	},
 	{
-		name: '힙',
+		name: '힙 🤖',
 		problems: [
 			{
 				id: 1,
@@ -195,6 +195,19 @@ export const categories2: Category[] = [
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/6550',
+				platform: 'Baekjoon',
+			},
+		],
+	},
+	{
+		name: '백트래킹 🤖',
+		problems: [
+			{
+				id: 1,
+				title: '(#75) 백준 15649 N과 M(1)',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/15649',
 				platform: 'Baekjoon',
 			},
 		],

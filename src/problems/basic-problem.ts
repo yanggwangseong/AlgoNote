@@ -85,6 +85,14 @@ export const categories1: Category[] = [
 				link: 'https://www.acmicpc.net/problem/1149',
 				platform: 'Baekjoon',
 			},
+			{
+				id: 2,
+				title: '(#18) 백준 11053 가장 긴 증가하는 부분 수열 - LIS',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/11053',
+				platform: 'Baekjoon',
+			},
 		],
 	},
 	{
@@ -180,6 +188,45 @@ export const categories1: Category[] = [
 	},
 	{
 		name: '문자열',
+		problems: [
+			{
+				id: 1,
+				title: '(#74) 백준 6550 부분문자열',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/6550',
+				platform: 'Baekjoon',
+			},
+		],
+	},
+	{
+		name: '정렬',
+		problems: [
+			{
+				id: 1,
+				title: '(#74) 백준 6550 부분문자열',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/6550',
+				platform: 'Baekjoon',
+			},
+		],
+	},
+	{
+		name: '백트래킹',
+		problems: [
+			{
+				id: 1,
+				title: '(#74) 백준 6550 부분문자열',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/6550',
+				platform: 'Baekjoon',
+			},
+		],
+	},
+	{
+		name: '순열/조합',
 		problems: [
 			{
 				id: 1,
