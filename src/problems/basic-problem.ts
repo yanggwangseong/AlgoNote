@@ -6,18 +6,10 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#1) 백준 1260 DFS와 BFS',
+				title: '(#1) 백준 1260 DFS와 BFS 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/1260',
-				platform: 'Baekjoon',
-			},
-			{
-				id: 2,
-				title: '(#2) 백준 2606 바이러스',
-				difficulty: 'Easy',
-				completed: false,
-				link: 'https://www.acmicpc.net/problem/2606',
 				platform: 'Baekjoon',
 			},
 		],
@@ -27,23 +19,10 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#7) 백준 1753 최단경로',
+				title: '(#7) 백준 1753 최단경로 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/1753',
-				platform: 'Baekjoon',
-			},
-		],
-	},
-	{
-		name: '구현',
-		problems: [
-			{
-				id: 1,
-				title: '(#59) 백준 2578 빙고',
-				difficulty: 'Easy',
-				completed: false,
-				link: 'https://www.acmicpc.net/problem/2578',
 				platform: 'Baekjoon',
 			},
 		],
@@ -53,7 +32,7 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#11) 백준 2503 숫자야구',
+				title: '(#11) 백준 2503 숫자야구 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/2503',
@@ -66,7 +45,7 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#14) 백준 5585 거스름돈',
+				title: '(#14) 백준 5585 거스름돈 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/5585',
@@ -79,7 +58,7 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#17) 백준 1149 RGB거리 - 조약돌 (Pebble Sum)',
+				title: '(#17) 백준 1149 RGB거리 - 조약돌 (Pebble Sum) 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/1149',
@@ -87,10 +66,26 @@ export const categories1: Category[] = [
 			},
 			{
 				id: 2,
-				title: '(#18) 백준 11053 가장 긴 증가하는 부분 수열 - LIS',
+				title: '(#18) 백준 11053 가장 긴 증가하는 부분 수열 - LIS 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/11053',
+				platform: 'Baekjoon',
+			},
+			{
+				id: 3,
+				title: '(#19) 백준 9251 LCS - LCS 😀',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/9251',
+				platform: 'Baekjoon',
+			},
+			{
+				id: 4,
+				title: '(#20) 백준 12865 평범한 배낭 - Knapsack 😀',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/12865',
 				platform: 'Baekjoon',
 			},
 		],
@@ -100,36 +95,10 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#22) 백준 1920 수 찾기',
+				title: '(#22) 백준 1920 수 찾기 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/1920',
-				platform: 'Baekjoon',
-			},
-		],
-	},
-	{
-		name: '파라매트릭 서치',
-		problems: [
-			{
-				id: 1,
-				title: '(#23) 백준 2110 공유기 설치',
-				difficulty: 'Easy',
-				completed: false,
-				link: 'https://www.acmicpc.net/problem/2110',
-				platform: 'Baekjoon',
-			},
-		],
-	},
-	{
-		name: '투포인터',
-		problems: [
-			{
-				id: 1,
-				title: '(#24) 백준 1806 부분합',
-				difficulty: 'Easy',
-				completed: false,
-				link: 'https://www.acmicpc.net/problem/1806',
 				platform: 'Baekjoon',
 			},
 		],
@@ -139,10 +108,18 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#26) 프로그래머스 올바른 괄호',
+				title: '(#26) 프로그래머스 올바른 괄호 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://school.programmers.co.kr/learn/courses/30/lessons/12909',
+				platform: 'Programmers',
+			},
+			{
+				id: 2,
+				title: '(#110) 프로그래머스 프로세스 😀',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://school.programmers.co.kr/learn/courses/30/lessons/42587',
 				platform: 'Programmers',
 			},
 		],
@@ -152,7 +129,7 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#28) 프로그래머스 전화번호 목록',
+				title: '(#28) 프로그래머스 전화번호 목록 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://school.programmers.co.kr/learn/courses/30/lessons/42577',
@@ -165,7 +142,7 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#29) 프로그래머스 더맵게',
+				title: '(#29) 프로그래머스 더맵게 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://school.programmers.co.kr/learn/courses/30/lessons/42626',
@@ -178,7 +155,7 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#72) 백준 1991 트리 순회',
+				title: '(#72) 백준 1991 트리 순회 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/1991',
@@ -191,33 +168,7 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#74) 백준 6550 부분문자열',
-				difficulty: 'Easy',
-				completed: false,
-				link: 'https://www.acmicpc.net/problem/6550',
-				platform: 'Baekjoon',
-			},
-		],
-	},
-	{
-		name: '정렬',
-		problems: [
-			{
-				id: 1,
-				title: '(#74) 백준 6550 부분문자열',
-				difficulty: 'Easy',
-				completed: false,
-				link: 'https://www.acmicpc.net/problem/6550',
-				platform: 'Baekjoon',
-			},
-		],
-	},
-	{
-		name: '백트래킹',
-		problems: [
-			{
-				id: 1,
-				title: '(#74) 백준 6550 부분문자열',
+				title: '(#74) 백준 6550 부분문자열 😀',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://www.acmicpc.net/problem/6550',
@@ -230,10 +181,18 @@ export const categories1: Category[] = [
 		problems: [
 			{
 				id: 1,
-				title: '(#74) 백준 6550 부분문자열',
+				title: '(#144) 백준 6603 로또 😀',
 				difficulty: 'Easy',
 				completed: false,
-				link: 'https://www.acmicpc.net/problem/6550',
+				link: 'https://www.acmicpc.net/problem/6603',
+				platform: 'Baekjoon',
+			},
+			{
+				id: 2,
+				title: '(#145) 백준 10974 모든 순열 😀',
+				difficulty: 'Easy',
+				completed: false,
+				link: 'https://www.acmicpc.net/problem/10974',
 				platform: 'Baekjoon',
 			},
 		],
