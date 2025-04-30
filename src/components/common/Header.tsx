@@ -74,6 +74,7 @@ export function Header({
 				>
 					<option value={1}>Basic</option>
 					<option value={2}>50 Problem</option>
+					<option value={3}>All Problem</option>
 				</Select>
 				<ThemeToggle onClick={onToggleTheme}>Theme Toggle</ThemeToggle>
 			</div>

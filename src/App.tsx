@@ -8,7 +8,7 @@ import { CategoriesContainer } from './components/CategoriesContainer';
 import { Header } from './components/common/Header';
 import { Layout } from './components/common/Layout';
 
-import { categories1, categories2 } from './problems';
+import { categories1, categories2, categories3 } from './problems';
 import GlobalStyle from './styles/GlobalStyle';
 import { darkTheme, lightTheme } from './styles/theme';
 
@@ -31,7 +31,8 @@ function App() {
 				return categories1;
 			case 2:
 				return categories2;
-
+			case 3:
+				return categories3;
 			default:
 				return categories1;
 		}
