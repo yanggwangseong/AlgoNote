@@ -11,7 +11,7 @@ const Container = styled.div`
 
 interface ProblemListProps {
 	category: Category;
-	onToggleComplete: (id: number) => void;
+	onToggleComplete: (id: number, name: string) => void;
 }
 
 export function ProblemList({ category, onToggleComplete }: ProblemListProps) {
@@ -19,9 +19,10 @@ export function ProblemList({ category, onToggleComplete }: ProblemListProps) {
 		<Container>
 			{category.problems.map((problem) => (
 				<ProblemItem
-					key={problem.id}
+					key={`${category.name}_${problem.id}`}
 					problem={problem}
-					onToggleComplete={onToggleComplete}
+					categoryName={category.name}
+					onToggleComplete={() => onToggleComplete(problem.id, category.name)}
 				/>
 			))}
 		</Container>

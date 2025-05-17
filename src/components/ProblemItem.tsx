@@ -2,14 +2,21 @@ import styled from '@emotion/styled';
 
 import { Difficulty, Platform, Problem } from '@/types/problem';
 
-const Item = styled.div`
+const Item = styled.div<{ completed: boolean }>`
 	display: flex;
 	align-items: center;
 	padding: 16px;
 	border-bottom: 1px solid ${(props) => props.theme.border};
+	opacity: ${({ completed }) => (completed ? 0.7 : 1)};
+	background-color: ${({ completed, theme }) =>
+		completed ? theme.background : 'transparent'};
 
 	&:last-child {
 		border-bottom: none;
+	}
+
+	&:hover {
+		background-color: ${({ theme }) => theme.hover};
 	}
 `;
 
@@ -17,13 +24,14 @@ const Checkbox = styled.input`
 	margin-right: 12px;
 `;
 
-const Title = styled.a`
+const Title = styled.a<{ completed: boolean }>`
 	flex: 1;
 	color: ${(props) => props.theme.text};
-	text-decoration: none;
+	text-decoration: ${({ completed }) => (completed ? 'line-through' : 'none')};
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: ${({ completed }) =>
+			completed ? 'line-through' : 'underline'};
 	}
 `;
 
@@ -74,18 +82,28 @@ const PlatformBadge = styled.span<{ platform: Platform }>`
 
 interface ProblemItemProps {
 	problem: Problem;
-	onToggleComplete: (id: number) => void;
+	categoryName: string;
+	onToggleComplete: (id: number, name: string) => void;
 }
 
-export function ProblemItem({ problem, onToggleComplete }: ProblemItemProps) {
+export function ProblemItem({
+	problem,
+	categoryName,
+	onToggleComplete,
+}: ProblemItemProps) {
 	return (
-		<Item>
+		<Item completed={problem.completed}>
 			<Checkbox
 				type="checkbox"
 				checked={problem.completed}
-				onChange={() => onToggleComplete(problem.id)}
+				onChange={() => onToggleComplete(problem.id, categoryName)}
 			/>
-			<Title href={problem.link} target="_blank" rel="noopener noreferrer">
+			<Title
+				href={problem.link}
+				target="_blank"
+				rel="noopener noreferrer"
+				completed={problem.completed}
+			>
 				{problem.id}. {problem.title}
 			</Title>
 			<BadgeContainer>
