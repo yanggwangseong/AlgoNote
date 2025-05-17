@@ -23,7 +23,7 @@ const CategoryTitle = styled.h2`
 
 interface CategoriesContainerProps {
 	categories: Category[];
-	onToggleComplete: (id: number) => void;
+	onToggleComplete: (id: number, name: string) => void;
 }
 
 export function CategoriesContainer({
@@ -37,7 +37,7 @@ export function CategoriesContainer({
 					<CategoryTitle>{category.name}</CategoryTitle>
 					<ProblemList
 						category={category}
-						onToggleComplete={onToggleComplete}
+						onToggleComplete={(id, name) => onToggleComplete(id, name)}
 					/>
 				</div>
 			))}

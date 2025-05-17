@@ -20,22 +20,51 @@ const AppContainer = styled.div`
 function App() {
 	const [isDarkMode, setIsDarkMode] = useState(false);
 	const [selectedProblemSet, setSelectedProblemSet] = useState<number>(1);
+	const [completedProblems, setCompletedProblems] = useState<Set<string>>(
+		() => {
+			// localStorage에서 완료된 문제 목록을 불러옵니다
+			const saved = localStorage.getItem('completedProblems');
+			return saved ? new Set(JSON.parse(saved)) : new Set();
+		},
+	);
 
-	const handleToggleComplete = (id: number) => {
-		console.log('Toggle complete:', id);
+	const handleToggleComplete = (id: number, name: string) => {
+		const problemKey = `${name}_${id}`;
+		setCompletedProblems((prev) => {
+			const newSet = new Set(prev);
+			if (newSet.has(problemKey)) {
+				newSet.delete(problemKey);
+			} else {
+				newSet.add(problemKey);
+			}
+			// localStorage에 저장
+			localStorage.setItem('completedProblems', JSON.stringify([...newSet]));
+			return newSet;
+		});
 	};
 
 	const getProblemSet = (setNumber: number) => {
-		switch (setNumber) {
-			case 1:
-				return categories1;
-			case 2:
-				return categories2;
-			case 3:
-				return categories3;
-			default:
-				return categories1;
-		}
+		const problems = (() => {
+			switch (setNumber) {
+				case 1:
+					return categories1;
+				case 2:
+					return categories2;
+				case 3:
+					return categories3;
+				default:
+					return categories1;
+			}
+		})();
+
+		// 각 문제의 completed 상태를 업데이트
+		return problems.map((category) => ({
+			...category,
+			problems: category.problems.map((problem) => ({
+				...problem,
+				completed: completedProblems.has(`${category.name}_${problem.id}`),
+			})),
+		}));
 	};
 
 	return (
