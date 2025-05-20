@@ -50,16 +50,38 @@ const Select = styled.select`
 	}
 `;
 
+const ButtonGroup = styled.div`
+	display: flex;
+	gap: 8px;
+`;
+
+const ResetButton = styled.button`
+	padding: 8px 16px;
+	border-radius: 4px;
+	border: 1px solid ${(props) => props.theme.border};
+	background: transparent;
+	cursor: pointer;
+	color: ${(props) => props.theme.text};
+	transition: all 0.2s ease;
+
+	&:hover {
+		background-color: ${(props) => props.theme.hover};
+		color: ${(props) => props.theme.primary};
+	}
+`;
+
 interface HeaderProps {
 	onToggleTheme: () => void;
 	selectedProblemSet: number;
 	onProblemSetChange: (value: number) => void;
+	onReset: () => void;
 }
 
 export function Header({
 	onToggleTheme,
 	selectedProblemSet,
 	onProblemSetChange,
+	onReset,
 }: HeaderProps) {
 	return (
 		<HeaderContainer>
@@ -67,7 +89,7 @@ export function Header({
 				<Title>알고리즘 문제 풀이</Title>
 				<Subtitle>Algorithm Problem Solving</Subtitle>
 			</TitleContainer>
-			<div>
+			<ButtonGroup>
 				<Select
 					value={selectedProblemSet}
 					onChange={(e) => onProblemSetChange(Number(e.target.value))}
@@ -76,8 +98,9 @@ export function Header({
 					<option value={2}>50 Problem</option>
 					<option value={3}>All Problem</option>
 				</Select>
+				<ResetButton onClick={onReset}>Reset</ResetButton>
 				<ThemeToggle onClick={onToggleTheme}>Theme Toggle</ThemeToggle>
-			</div>
+			</ButtonGroup>
 		</HeaderContainer>
 	);
 }

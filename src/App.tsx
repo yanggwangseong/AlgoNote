@@ -67,6 +67,11 @@ function App() {
 		}));
 	};
 
+	const handleReset = () => {
+		setCompletedProblems(new Set());
+		localStorage.removeItem('completedProblems');
+	};
+
 	return (
 		<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
 			<GlobalStyle />
@@ -79,6 +84,7 @@ function App() {
 							onProblemSetChange={(value: number) =>
 								setSelectedProblemSet(value)
 							}
+							onReset={handleReset}
 						/>
 						<Routes>
 							<Route
