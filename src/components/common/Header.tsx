@@ -94,9 +94,8 @@ export function Header({
 					value={selectedProblemSet}
 					onChange={(e) => onProblemSetChange(Number(e.target.value))}
 				>
-					<option value={1}>Basic</option>
-					<option value={2}>50 Problem</option>
-					<option value={3}>All Problem</option>
+					<option value={1}>All Problem</option>
+					<option value={2}>Tony Problems</option>
 				</Select>
 				<ResetButton onClick={onReset}>Reset</ResetButton>
 				<ThemeToggle onClick={onToggleTheme}>Theme Toggle</ThemeToggle>
