@@ -1,16 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { ThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 
+import { fetchProblemsFromGitHub } from './api/github';
 import { CategoriesContainer } from './components/CategoriesContainer';
 import { Header } from './components/common/Header';
 import { Layout } from './components/common/Layout';
-
-import { categories1, categories2, categories3 } from './problems';
+import { categories3 } from './problems';
 import GlobalStyle from './styles/GlobalStyle';
 import { darkTheme, lightTheme } from './styles/theme';
+import { Category } from './types/problem';
 
 const AppContainer = styled.div`
 	min-height: 100vh;
@@ -27,6 +28,10 @@ function App() {
 			return saved ? new Set(JSON.parse(saved)) : new Set();
 		},
 	);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState<string | null>(null);
+
+	const [categories4State, setCategories4State] = useState<Category[]>([]);
 
 	const handleToggleComplete = (id: number, name: string) => {
 		const problemKey = `${name}_${id}`;
@@ -47,13 +52,11 @@ function App() {
 		const problems = (() => {
 			switch (setNumber) {
 				case 1:
-					return categories1;
-				case 2:
-					return categories2;
-				case 3:
 					return categories3;
+				case 2:
+					return categories4State;
 				default:
-					return categories1;
+					return categories3;
 			}
 		})();
 
@@ -72,6 +75,26 @@ function App() {
 		localStorage.removeItem('completedProblems');
 	};
 
+	useEffect(() => {
+		const loadProblemsFromGitHub = async () => {
+			try {
+				setIsLoading(true);
+				setError(null);
+				const problems = await fetchProblemsFromGitHub();
+
+				setCategories4State(problems);
+			} catch (err) {
+				setError(
+					err instanceof Error ? err.message : 'Failed to load problems',
+				);
+			} finally {
+				setIsLoading(false);
+			}
+		};
+
+		loadProblemsFromGitHub();
+	}, []);
+
 	return (
 		<ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
 			<GlobalStyle />
@@ -86,22 +109,41 @@ function App() {
 							}
 							onReset={handleReset}
 						/>
-						<Routes>
-							<Route
-								path="/"
-								element={
-									<CategoriesContainer
-										categories={getProblemSet(selectedProblemSet)}
-										onToggleComplete={handleToggleComplete}
-									/>
-								}
-							/>
-						</Routes>
+						{error && <ErrorMessage>{error}</ErrorMessage>}
+						{isLoading ? (
+							<LoadingSpinner>Loading problems...</LoadingSpinner>
+						) : (
+							<Routes>
+								<Route
+									path="/"
+									element={
+										<CategoriesContainer
+											categories={getProblemSet(selectedProblemSet)}
+											onToggleComplete={handleToggleComplete}
+										/>
+									}
+								/>
+							</Routes>
+						)}
 					</Layout>
 				</BrowserRouter>
 			</AppContainer>
 		</ThemeProvider>
 	);
 }
+
+const ErrorMessage = styled.div`
+	color: ${(props) => props.theme.error};
+	padding: 1rem;
+	text-align: center;
+`;
+
+const LoadingSpinner = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	color: ${(props) => props.theme.text};
+`;
 
 export default App;
