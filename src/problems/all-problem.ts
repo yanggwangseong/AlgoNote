@@ -107,14 +107,6 @@ export const categories3: Category[] = [
 			},
 			{
 				id: 13,
-				title: '섬 연결하기',
-				difficulty: 'Easy',
-				completed: false,
-				link: 'https://school.programmers.co.kr/learn/courses/30/lessons/42861',
-				platform: 'Programmers',
-			},
-			{
-				id: 14,
 				title: '단속카메라',
 				difficulty: 'Easy',
 				completed: false,
@@ -122,7 +114,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 15,
+				id: 14,
 				title: '거스름돈',
 				difficulty: 'Easy',
 				completed: false,
@@ -130,7 +122,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 16,
+				id: 15,
 				title: '부분수열의 합',
 				difficulty: 'Easy',
 				completed: false,
@@ -138,7 +130,7 @@ export const categories3: Category[] = [
 				platform: 'Baekjoon',
 			},
 			{
-				id: 17,
+				id: 16,
 				title: '행운의 문자열',
 				difficulty: 'Easy',
 				completed: false,
@@ -146,7 +138,7 @@ export const categories3: Category[] = [
 				platform: 'Baekjoon',
 			},
 			{
-				id: 18,
+				id: 17,
 				title: '거스름돈',
 				difficulty: 'Easy',
 				completed: false,
@@ -154,7 +146,7 @@ export const categories3: Category[] = [
 				platform: 'Baekjoon',
 			},
 			{
-				id: 19,
+				id: 18,
 				title: '보물',
 				difficulty: 'Easy',
 				completed: false,
@@ -162,7 +154,7 @@ export const categories3: Category[] = [
 				platform: 'Baekjoon',
 			},
 			{
-				id: 20,
+				id: 19,
 				title: '도서관',
 				difficulty: 'Easy',
 				completed: false,
@@ -170,7 +162,7 @@ export const categories3: Category[] = [
 				platform: 'Baekjoon',
 			},
 			{
-				id: 21,
+				id: 20,
 				title: '같은 숫자는 싫어',
 				difficulty: 'Easy',
 				completed: true,
@@ -178,7 +170,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 22,
+				id: 21,
 				title: '기능개발',
 				difficulty: 'Easy',
 				completed: false,
@@ -186,7 +178,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 23,
+				id: 22,
 				title: '올바른 괄호',
 				difficulty: 'Easy',
 				completed: false,
@@ -194,7 +186,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 24,
+				id: 23,
 				title: '프로세스',
 				difficulty: 'Easy',
 				completed: false,
@@ -202,7 +194,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 25,
+				id: 24,
 				title: '다리를 지나는 트럭',
 				difficulty: 'Easy',
 				completed: false,
@@ -210,7 +202,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 26,
+				id: 25,
 				title: '주식가격',
 				difficulty: 'Easy',
 				completed: false,
@@ -218,7 +210,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 27,
+				id: 26,
 				title: '더 맵게',
 				difficulty: 'Easy',
 				completed: false,
@@ -226,7 +218,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 28,
+				id: 27,
 				title: '디스크 컨트롤러',
 				difficulty: 'Easy',
 				completed: false,
@@ -234,7 +226,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 29,
+				id: 28,
 				title: '이중 우선순위큐',
 				difficulty: 'Easy',
 				completed: false,
@@ -242,7 +234,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 30,
+				id: 29,
 				title: '완주하지 못한 선수',
 				difficulty: 'Easy',
 				completed: false,
@@ -250,7 +242,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 31,
+				id: 30,
 				title: '폰켓몬',
 				difficulty: 'Easy',
 				completed: false,
@@ -258,7 +250,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 32,
+				id: 31,
 				title: '전화번호 목록',
 				difficulty: 'Easy',
 				completed: false,
@@ -266,7 +258,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 33,
+				id: 32,
 				title: '의상',
 				difficulty: 'Easy',
 				completed: false,
@@ -274,7 +266,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 34,
+				id: 33,
 				title: '베스트앨범',
 				difficulty: 'Easy',
 				completed: false,
@@ -282,15 +274,15 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 35,
-				title: '정렬',
+				id: 34,
+				title: 'K번째수',
 				difficulty: 'Easy',
 				completed: false,
 				link: 'https://school.programmers.co.kr/learn/courses/30/lessons/42748',
 				platform: 'Programmers',
 			},
 			{
-				id: 36,
+				id: 35,
 				title: '가장 큰 수',
 				difficulty: 'Easy',
 				completed: false,
@@ -298,7 +290,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 37,
+				id: 36,
 				title: 'H-Index',
 				difficulty: 'Easy',
 				completed: false,
@@ -306,7 +298,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 38,
+				id: 37,
 				title: '입국심사',
 				difficulty: 'Easy',
 				completed: false,
@@ -314,7 +306,7 @@ export const categories3: Category[] = [
 				platform: 'Programmers',
 			},
 			{
-				id: 39,
+				id: 38,
 				title: '징검다리',
 				difficulty: 'Easy',
 				completed: false,
@@ -324,7 +316,7 @@ export const categories3: Category[] = [
 		],
 	},
 	{
-		name: 'Tree/DFS/BFS/Graph/MST/Kruskal/Union-Find/Prim',
+		name: 'Tree/DFS/BFS/Dijkstra/Graph/MST/Kruskal/Union-Find/Prim',
 		problems: [
 			{
 				id: 1,
@@ -357,6 +349,14 @@ export const categories3: Category[] = [
 				completed: true,
 				link: 'https://www.acmicpc.net/problem/1991',
 				platform: 'Baekjoon',
+			},
+			{
+				id: 5,
+				title: '지형 이동',
+				difficulty: 'Easy',
+				completed: true,
+				link: 'https://school.programmers.co.kr/learn/courses/30/lessons/62050',
+				platform: 'Programmers',
 			},
 		],
 	},
